@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirebaseSocial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N0-AZ-iao">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A7h-vB-jkf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gg-YF-Luu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wq-Wc-UKH">
+                                <rect key="frame" x="16" y="588.5" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxj-FD-1ug" customClass="GIDSignInButton">
+                                <rect key="frame" x="20" y="40" width="335" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Kaa-IQ-0QS"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="googleSignTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yod-P4-bdb"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIL-5W-x9p">
+                                <rect key="frame" x="20" y="100" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.7803921568627451" green="0.0" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Z7f-Xp-tEz"/>
+                                </constraints>
+                                <state key="normal" title="Login Google">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logginGooglePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j2M-gI-mdE"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-UD-TSH" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="20" y="190" width="335" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pm8-Vb-B1V"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="googleSignTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="FdY-YD-Ncw"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mak-ap-Gs8">
+                                <rect key="frame" x="20" y="250" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.29803921570000003" green="0.41960784309999999" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iQa-Cq-lr7"/>
+                                </constraints>
+                                <state key="normal" title="Facebook Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logginFacebookPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Cp-cf-u81"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mIL-5W-x9p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5sU-nf-xkN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dxj-FD-1ug" secondAttribute="trailing" constant="20" id="6U3-BJ-h7p"/>
+                            <constraint firstItem="Mak-ap-Gs8" firstAttribute="trailing" secondItem="cc8-UD-TSH" secondAttribute="trailing" id="7Jb-u2-y7A"/>
+                            <constraint firstItem="Mak-ap-Gs8" firstAttribute="top" secondItem="cc8-UD-TSH" secondAttribute="bottom" constant="10" id="9Wk-fJ-TC0"/>
+                            <constraint firstItem="Mak-ap-Gs8" firstAttribute="leading" secondItem="cc8-UD-TSH" secondAttribute="leading" id="Az2-z8-axx"/>
+                            <constraint firstItem="5wq-Wc-UKH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Sjj-hH-vUf"/>
+                            <constraint firstItem="cc8-UD-TSH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WwA-Bg-ICd"/>
+                            <constraint firstItem="5N0-AZ-iao" firstAttribute="top" secondItem="5wq-Wc-UKH" secondAttribute="bottom" constant="8" id="Xd9-58-dLP"/>
+                            <constraint firstItem="dxj-FD-1ug" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a3y-q5-aAJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cc8-UD-TSH" secondAttribute="trailing" constant="20" id="cKz-y4-kpH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5N0-AZ-iao" secondAttribute="trailing" id="f6Q-Zh-lqj"/>
+                            <constraint firstItem="mIL-5W-x9p" firstAttribute="top" secondItem="dxj-FD-1ug" secondAttribute="bottom" constant="10" id="jrh-pK-Dgc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5N0-AZ-iao" secondAttribute="bottom" id="kSk-hl-FGd"/>
+                            <constraint firstItem="5N0-AZ-iao" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ma0-PX-hbA"/>
+                            <constraint firstItem="cc8-UD-TSH" firstAttribute="top" secondItem="mIL-5W-x9p" secondAttribute="bottom" constant="40" id="o56-kC-RLx"/>
+                            <constraint firstItem="dxj-FD-1ug" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pRc-wa-4K6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5wq-Wc-UKH" secondAttribute="trailing" constant="16" id="s0D-wq-NJi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mIL-5W-x9p" secondAttribute="trailing" constant="20" id="uvp-r3-KQ6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btFacebookLogin" destination="cc8-UD-TSH" id="hNq-hl-ihW"/>
+                        <outlet property="btLogout" destination="5N0-AZ-iao" id="n6G-Qn-9xi"/>
+                        <outlet property="lbInfo" destination="5wq-Wc-UKH" id="5fm-hp-p4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
